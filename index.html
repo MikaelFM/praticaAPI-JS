@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="tudo">
+        <form id="form">
+            <h1>Selecione os dados do veículo</h1>
+            <div>
+                <label for="tipo">Selecione o Tipo:</label>
+                <select v-model="tipo_veiculo" @change="pegaMarcas()">
+                    <option v-for="tipo in tipos" :value="tipo.codigo">{{tipo.nome}}</option>
+                </select>
+            </div>
+            <div v-if="marcas.length > 0">
+                <label for="marca">Selecione a marca:</label>
+                <select v-model="marca_veiculo" @change="pegaModelos()">
+                    <option v-for="marca in marcas" :value="marca.codigo">{{marca.nome}}</option>
+                </select>
+            </div>
+            <div v-if="modelos.length > 0">
+                <label for="modelo">Selecione o modelo:</label>
+                <select v-model="modelo_veiculo" @change="pegaAnos()">
+                    <option v-for="modelo in modelos" :value="modelo.codigo">{{modelo.nome}}</option>
+                </select>
+            </div>
+            <div v-if="anos.length > 0">
+                <label for="ano_veiculo">Selecione o Ano:</label>
+                <select v-model="ano_veiculo" @change="pegaDados()">
+                    <option v-for="ano in anos" :value="ano.codigo">{{ano.nome}}</option>
+                </select>
+            </div>
+        </form>
+        <div v-if="dados.length != 0">
+            <h1>Dados do carro:</h1>
+            <ul>
+                <li><b>Valor:</b> {{dados.Valor}}</li>
+                <li><b>Marca:</b> {{dados.Marca}}</li>
+                <li><b>Modelo:</b> {{dados.Modelo}}</li>
+                <li><b>Ano:</b> {{dados.AnoModelo}}</li>
+                <li><b>Combustivel:</b> {{dados.Combustivel}}</li>
+                <li><b>Codigo Fipe:</b> {{dados.CodigoFipe}}</li>
+                <li><b>Mês Referencia:</b> {{dados.MesReferencia}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
