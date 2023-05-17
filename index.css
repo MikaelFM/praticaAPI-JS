@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(43, 43, 43);
+    color: whitesmoke;
+    font-family: 'trebuchet ms';
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+}
+
+body h1{
+    text-align: center;
+}
+
+body select{
+    margin-bottom: 1.2vh;
+    display: block;
+    padding: 1vh;
+}
+label {
+    display: block;
+    margin-bottom: 1.2vh;
+}
+body li{
+    list-style:none;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+body ul{
+    background-color: rgb(34, 34, 34);
+    padding: 3%;
+    border-radius: 30px;
+}
+
+body select{
+    background-color: rgb(34, 34, 34);
+    height: 4vh;
+    color: whitesmoke;
+    border-style: none;
+    border-radius: 5px;
+    font-size: large;
+}
