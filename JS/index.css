@@ -2,23 +2,25 @@ body{
     background-color: rgb(43, 43, 43);
     color: whitesmoke;
     font-family: 'trebuchet ms';
-    font-size: x-large;
+    font-size: 1.2vw;
     display: flex;
     justify-content: center;
 }
 
 body h1{
     text-align: center;
+    font-size: 2.3vw;
 }
 
 body select{
     margin-bottom: 1.2vh;
     display: block;
-    padding: 1vh;
+    padding: 0.2vw 0.4vw;
 }
 label {
     display: block;
     margin-bottom: 1.2vh;
+    font-size: 1vw;
 }
 body li{
     list-style:none;
@@ -29,14 +31,30 @@ body li{
 body ul{
     background-color: rgb(34, 34, 34);
     padding: 3%;
+    width: 33vw;
     border-radius: 30px;
 }
 
 body select{
     background-color: rgb(34, 34, 34);
-    height: 4vh;
+    height: 1.8vw;
     color: whitesmoke;
     border-style: none;
     border-radius: 5px;
-    font-size: large;
+    font-size: 1vw;
+}
+ul li {
+    display: flex;
+}
+p {
+    margin: 0 0.8vw;
+}
+.title {
+    font-weight: bold;
+    width: 35%;
+    text-align: right;
+}
+.data {
+    width: 65%;
+    text-align: left;
 }
